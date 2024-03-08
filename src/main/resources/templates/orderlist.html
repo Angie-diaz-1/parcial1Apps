@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Órdenes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lista de Órdenes</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Comida</th>
+                    <th>Bebida</th>
+                    <th>Postre</th>
+                    <th>Postre</th>
+                    <th>Fruta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterar sobre la lista de órdenes -->
+                <tr th:each="order : ${order}">
+                    <td th:text="${order.id}"></td>
+                    <td th:text="${order.meal}"></td>
+                    <td th:text="${order.drink}"></td>
+                    <td th:text="${order.sweet}"></td>
+                    <td th:text="${order.dessert}"></td>
+                    <td th:text="${order.fruit}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button>
+			        <a th:href="@{/order}" class="btn">Nueva Orden</a>
+
+		</button>
+    </div>
+
+
+</body>
+</html>

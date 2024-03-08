@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario order</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+    <h2>Formulario order</h2>
+    <form action="#" th:action="@{/order}" th:object="${order}" method="post">
+            <label for="meal">Comida:</label>
+            <input type="text" id="meal" name="meal" th:field="*{meal}" required>
+            <br>
+
+            <label for="drink">Bebida:</label>
+            <input type="text" id="drink" name="drink" th:field="*{drink}" required>
+            <br>
+
+            <label for="sweet">Postre:</label>
+            <input type="text" id="sweet" name="sweet" th:field="*{sweet}" required>
+            <br>
+
+            <label for="dessert">Dulce:</label>
+            <input type="text" id="dessert" name="dessert" th:field="*{dessert}" required>
+            <br>
+
+            <label for="fruit">Fruta:</label>
+            <input type="text" id="fruit" name="fruit" th:field="*{fruit}" required>
+            <br>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <button>
+			        <a th:href="@{/order/list}" class="btn">Ver lista de Ordenes</a>
+
+		</button>
+</div>
+</body>
+</html>      
+
