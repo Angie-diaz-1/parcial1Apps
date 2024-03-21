@@ -17,6 +17,7 @@ import com.eam.repository.IOrderRepository;
 @Controller
 @RequestMapping("/order")
 public class OrderController {
+	
 
 	  @Autowired
 	    private IOrderRepository  orderRepository;
